@@ -1,0 +1,15 @@
+{
+  "name": "generator-ducks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "yo-generators"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^4.12.0"
+  },
+  "description": "generate files with yeoman",
+  "repository": "https://github.com/v-pushkar/generator-duck.git",
+  "author": "v-pushkar <valerii.pushkar.work@gmail.conm>"
+}
