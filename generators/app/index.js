@@ -10,7 +10,7 @@ module.exports = class extends Generator {
 
   // first stage
   async prompting() {
-    this.log("Generator component starting... ");
+    this.log("Generator component app starting... ");
 
     this.answers = await this.prompt([
       
@@ -27,10 +27,8 @@ module.exports = class extends Generator {
       },
     ]);
   }
-actionExit(){
-  this.log("EXIT copy");
-}
-  // second stage
+
+  
   writing() {
     this.log("Writing files...");
 
@@ -49,6 +47,6 @@ actionExit(){
     });
   }
   end() {
-    this.log("Bye... 👋");
+    this.log("...end");
   }
 };
