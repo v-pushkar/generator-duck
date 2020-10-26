@@ -1,3 +1,7 @@
 {
-    "name": "generator-ducks"  
+    "name": "generator-ducks",
+    "files": [
+        "rdx",
+        "cmpt"
+      ]  
 }
