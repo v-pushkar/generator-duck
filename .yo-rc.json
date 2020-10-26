@@ -2,6 +2,7 @@
     "name": "generator-ducks",
     "files": [
         "rdx",
-        "cmpt"
+        "cmpt",
+        "app"
       ]  
 }

@@ -8,7 +8,6 @@ module.exports = class extends Generator {
     super(args, options);
   }
 
-  // first stage
   async prompting() {
     this.log("Generator component app starting... ");
 
