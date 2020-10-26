@@ -36,7 +36,7 @@ module.exports = class extends Generator {
 
   
   writing() {
-    this.log("Writing files...");
+    this.log("Try writing files...");
 
     const { type, name, path } = this.answers;
     const path_name = path? path : path_def
@@ -53,9 +53,9 @@ if (type === "redux-module") {
         );
       });
     }else if(type === "react component"){
-      this.log("add actions for create react components");
+      this.log(`No actions for " ${type} " yet`);
     } else {
-      this.log("No actions for you choice. Try again");
+      this.log(`No actions for you choice " ${type} ". Try again`);
     }
   }
   end() {
