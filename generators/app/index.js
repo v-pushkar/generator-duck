@@ -1,9 +1,8 @@
 const Generator = require("yeoman-generator");
 
-const files_rc = ["component.js", "module.js", "index.js", "view.js"];
-const files = ["component.js", "module.js", "index.js", "view.js"];
-// const files = ["component.js", "module.js", "index.js", "view.js"];
 
+const files = ["container.js", "index.js", "view.js"];
+const path_def = "src/components"
 module.exports = class extends Generator {
   constructor(args, options) {
     super(args, options);
@@ -11,21 +10,20 @@ module.exports = class extends Generator {
 
   // first stage
   async prompting() {
-    this.log("Generator starting... ");
+    this.log("Generator component starting... ");
 
     this.answers = await this.prompt([
-      {
-        type: "list",
-        name: "type",
-        message: "What do you want create?",
-        choices: ["redux-module", "react component"],
-        
-      },
+      
       {
         type: "input",
         name: "name",
         message: "Input the name for this module:",
-        validate: (input) => Boolean(input.length > 3),
+        validate: (input) => Boolean(input.length > 2),
+      },
+      {
+        type: "input",
+        name: "path",
+        message: "Input path for module (optional):",       
       },
     ]);
   }
@@ -37,21 +35,18 @@ actionExit(){
     this.log("Writing files...");
 
     const { type, name } = this.answers;
-if (type === "redux-module") {
-      files.forEach((i) => {
-        this.fs.copyTpl(
-          this.templatePath(i),
-          this.destinationPath(
-            `components/${name}/${name}${i}`
-          ),
-          {
-            name,
-          }
-        );
-      });
-    } else {
-      this.log("No actions for you choice. try again");
-    }
+    const path_name = path? path : path_def
+    files.forEach((i) => {
+      this.fs.copyTpl(
+        this.templatePath(i),
+        this.destinationPath(
+          `components/${name}/${name}${i}`
+        ),
+        {
+          name,
+        }
+      );
+    });
   }
   end() {
     this.log("Bye... 👋");

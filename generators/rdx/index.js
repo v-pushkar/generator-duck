@@ -8,8 +8,7 @@ module.exports = class extends Generator {
   constructor(args, options) {
     super(args, options);
   }
-
-  // first stage
+  
   async prompting() {
     this.log("Generator starting rdx... ");
 
@@ -25,7 +24,7 @@ module.exports = class extends Generator {
         type: "input",
         name: "name",
         message: "Input the name for this module:",
-        validate: (input) => Boolean(input.length > 3),
+        validate: (input) => Boolean(input.length > 2),
       },
       {
         type: "input",
