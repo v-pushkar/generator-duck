@@ -1,11 +1,8 @@
 {
-  "name": "generator-ducks",
+  
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
-  "files": [
-    "yo-generators"
-  ],
+  "license": "MIT",  
   "dependencies": {
     "yeoman-generator": "^4.12.0"
   },
