@@ -13,7 +13,7 @@ add to `.yo-rc.json` generator name (name must start with "generator-"): `
 }`<br />
 
 add folder with templates "generators" to project folder, <br />
-by default, generator use folder "app" for get templates. If you added not only "app" folder, you can use comand:** yo ducks:[folder_name] ** <br />
+by default, generator use folder "app" for get templates. If you added not only "app" folder, you can use comand: yo ducks:[folder_name] <br />
 
 run: <br />
 
