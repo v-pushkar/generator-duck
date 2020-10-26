@@ -34,13 +34,13 @@ actionExit(){
   writing() {
     this.log("Writing files...");
 
-    const { type, name } = this.answers;
+    const { type, name, path } = this.answers;
     const path_name = path? path : path_def
     files.forEach((i) => {
       this.fs.copyTpl(
         this.templatePath(i),
         this.destinationPath(
-          `components/${name}/${name}${i}`
+          `${path_name}/${name}/${name}${i}`
         ),
         {
           name,
